@@ -1,0 +1,76 @@
+﻿<Window x:Class="Multithreading_HomeWork_N1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multithreading_HomeWork_N1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="From" FontSize="20"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="To" FontSize="20"></TextBlock>
+            <TextBox Grid.Row="0" Grid.Column="1" Name="FromTextBox"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="ToTextBox"></TextBox>
+            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Start" Name="ButtonPrime" Click="ButtonPrimeOnClick"></Button>
+            <RichTextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="PrimeTextBox"></RichTextBox>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0"  Content="Start" Name="FibonacciButton" Click="ButtonFibonacciOnClick"></Button>
+            <RichTextBox Grid.Row="1" Name="FibonacciTextBox"></RichTextBox>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="PrimePause" Content="Pause" IsEnabled="False" Click="PrimePause_OnClick"></Button>
+            <Button Grid.Column="1" Name="PrimeStop" Content="Stop" IsEnabled="False" Click="PrimeStop_OnClick"></Button>
+            <Button Grid.Column="2" Name="PrimeResume" Content="Resume" IsEnabled="False" Click="PrimeResume_OnClick"></Button>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="FibonacciPause" Content="Pause" IsEnabled="False" Click="FibonacciPause_OnClick"></Button>
+            <Button Grid.Column="1" Name="FibonacciStop" Content="Stop" IsEnabled="False" Click="FibonacciStop_OnClick"></Button>
+            <Button Grid.Column="2" Name="FibonacciResume" Content="Resume" IsEnabled="False" Click="FibonacciResume_OnClick"></Button>
+        </Grid>
+    </Grid>
+</Window>
