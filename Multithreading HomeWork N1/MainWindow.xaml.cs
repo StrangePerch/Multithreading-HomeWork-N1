@@ -120,6 +120,7 @@ namespace Multithreading_HomeWork_N1
                     FibonacciTextBox.ScrollToEnd();
                 });
                 Thread.Sleep(100);
+                
                 if (FibonacciToPause)
                 {
                     FibonacciToPause = false;
